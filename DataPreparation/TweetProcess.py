@@ -13,16 +13,16 @@ class LoadMiscTextUnits(object):
     """class for loading and getting the misc text units like slang words, feeling words, stop words, etc to be filtered out during processing of tweets"""
     def __init__(self):
         #english stopwords, gets the english stopwords from the file: "englishStopWords" stored in Resources folder
-        self._englishStopwords = [lines.rstrip() for lines in open("C:\\Users\\cisstudent\\TwitterEventInfoRank\\TwitterEventInfoRank\\Resources\\englishStopwords")]
+        self._englishStopwords = [lines.rstrip() for lines in open("..\\Resources\\englishStopwords")]
         
         #list of slang words used in twitter, gets the twitter slang words from the file: "TwitterSlangList.txt" stored in Resources folder
-        self._twitterSlang = [lines.rstrip() for lines in open("C:\\Users\\cisstudent\\TwitterEventInfoRank\\TwitterEventInfoRank\\Resources\\TwitterSlangList.txt")]
+        self._twitterSlang = [lines.rstrip() for lines in open("..\\Resources\\TwitterSlangList.txt")]
         
         #general internet slang words, gets the general internet slang words from the file: "internetSlang.txt" stored in Resources folder
-        self._internetSlang = [lines.rstrip().split(":")[0].lower() for lines in open("C:\\Users\\cisstudent\\TwitterEventInfoRank\\TwitterEventInfoRank\\Resources\\internetSlang.txt")]
+        self._internetSlang = [lines.rstrip().split(":")[0].lower() for lines in open("..\\Resources\\internetSlang.txt")]
 
         #feeling words from wefeelfine.org, gets the feeling words from the file: "feelingWords.txt" stored in Resources folder
-        self._feelingWords = [lines.rstrip().split()[0] for lines in open("C:\\Users\\cisstudent\\TwitterEventInfoRank\\TwitterEventInfoRank\\Resources\\feelingWords.txt")]
+        self._feelingWords = [lines.rstrip().split()[0] for lines in open("..\\Resources\\feelingWords.txt")]
 
         #masterList
         self._allSlangWords = self._internetSlang + self._twitterSlang

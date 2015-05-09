@@ -18,16 +18,16 @@ class TweetProcess:
         self.tweet = tweet
         
         #english stopwords, gets the english stopwords from the file: "englishStopWords" stored in utilFiles folder
-        self.english_stopwords = [lines.rstrip() for lines in open("C:\\Users\\cisstudent\\EIIMWorkspace\\SeenAPI\\utilFiles\\englishStopwords")]
+        self.english_stopwords = [lines.rstrip() for lines in open("..\\Resources\\englishStopwords")]
         
         #list of slang words used in twitter, gets the twitter slang words from the file: "TwitterSlangList.txt" stored in utilFiles folder
-        self.twitter_slang = [lines.rstrip() for lines in open("C:\\Users\\cisstudent\\EIIMWorkspace\\SeenAPI\\utilFiles\\TwitterSlangList.txt")]
+        self.twitter_slang = [lines.rstrip() for lines in open("..\\Resources\\TwitterSlangList.txt")]
         
         #general internet slang words, gets the general internet slang words from the file: "internetSlang.txt" stored in utilFiles folder
-        self.internet_slang = [lines.rstrip().split(":")[0].lower() for lines in open("C:\\Users\\cisstudent\\EIIMWorkspace\\SeenAPI\\utilFiles\\internetSlang.txt")]
+        self.internet_slang = [lines.rstrip().split(":")[0].lower() for lines in open("..\\Resources\\internetSlang.txt")]
         
         #feeling words from wefeelfine.org, gets the feeling words from the file: "feelingWords.txt" stored in utilFiles folder
-        self.feelingWords = [lines.rstrip().split()[0] for lines in open("C:\\Users\\cisstudent\\EIIMWorkspace\\SeenAPI\\utilFiles\\feelingWords.txt")]
+        self.feelingWords = [lines.rstrip().split()[0] for lines in open("..\\Resources\\feelingWords.txt")]
         
         #number of filtered hashtags in the tweet
         self.noHashTags = 0
@@ -523,13 +523,13 @@ class LoadSlang:
     """class for loading and getting the slang words to be filtered out during processing of tweets"""
     def __init__(self):
         #english stopwords, gets the english stopwords from the file: "englishStopWords" stored in utilFiles folder
-        self.english_stopwords = [lines.rstrip() for lines in open("C:\\Users\\cisstudent\\EIIMWorkspace\\SeenAPI\\utilFiles\\englishStopwords")]
+        self.english_stopwords = [lines.rstrip() for lines in open("..\\Resources\\englishStopwords")]
         
         #list of slang words used in twitter, gets the twitter slang words from the file: "TwitterSlangList.txt" stored in utilFiles folder
-        self.twitter_slang = [lines.rstrip() for lines in open("C:\\Users\\cisstudent\\EIIMWorkspace\\SeenAPI\\utilFiles\\TwitterSlangList.txt")]
+        self.twitter_slang = [lines.rstrip() for lines in open("..\\Resources\\TwitterSlangList.txt")]
         
         #general internet slang words, gets the general internet slang words from the file: "internetSlang.txt" stored in utilFiles folder
-        self.internet_slang = [lines.rstrip().split(":")[0].lower() for lines in open("C:\\Users\\cisstudent\\EIIMWorkspace\\SeenAPI\\utilFiles\\internetSlang.txt")]
+        self.internet_slang = [lines.rstrip().split(":")[0].lower() for lines in open("..\\Resources\\internetSlang.txt")]
 
         #masterList
         self.slangWords = self.english_stopwords+self.twitter_slang+self.internet_slang
